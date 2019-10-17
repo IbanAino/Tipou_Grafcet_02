@@ -3,6 +3,7 @@
 
 //*** LIBRARIES ***
 #include <arduino.h>
+#include "Step.h"
 
 class Transition
 {
@@ -10,13 +11,28 @@ class Transition
   //*** CONSTRUCTOR ***
   Transition();
 
-  private:
+  //*** FUNCTIONS ***
+  void AddPreviousStep(Step *previousStep);
+  virtual void ComputeTransition();
+
+  protected:
   //*** ATTRIBUTS ***
+  Step *previousStep;
 
   //*** OBJECTS ***
 
   //*** VARIABLES ***
 
 
+};
+
+class Transition1 : public Transition
+{
+  public:
+  //*** CONSTRUCTOR ***
+  Transition1();
+
+  //*** FUNCTIONS ***
+  void ComputeTransition();
 };
 #endif

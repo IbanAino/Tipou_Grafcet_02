@@ -2,25 +2,19 @@
 #include "step.h"
 #include "Transition.h"
 
-Step* Step1;
-Step* Step2;
-Step* Step3;
+Step1_Sleep* Object_Step1_Sleep;
+Transition1* Object_Transition1;
 
-Transition* Transition1;
-Transition* Transition2;
-Transition* Transition3;
 
 void setup() {
-  Step1 = new Step();
-  Step2 = new Step();
-  Step3 = new Step();
+  Serial.begin(9600);
+  Object_Step1_Sleep = new Step1_Sleep();
+  Object_Transition1 = new Transition1();
   
-  Transition1 = new Transition();
-  Transition2 = new Transition();
-  Transition3 = new Transition();
-
+  Object_Transition1 -> AddPreviousStep(Object_Step1_Sleep);
+  Object_Transition1 -> ComputeTransition();
 }
 
 void loop() {
-
+  //Object_Step1_Sleep -> Init();
 }

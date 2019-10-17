@@ -18,13 +18,27 @@ class Step
   virtual void Perform();
   virtual void Exit();
 
-  private:
   //*** ATTRIBUTS ***
+  
   bool activate;
-
+  protected :
   //*** OBJECTS ***
 
   //*** VARIABLES ***
   
+};
+
+class Step1_Sleep : public Step
+{
+  public:
+  //*** CONSTRUCTOR ***
+  Step1_Sleep();
+
+  //*** FUNCTIONS ***
+  virtual void Init();
+  virtual void Perform();
+  virtual void Exit();
+  
+
 };
 #endif
