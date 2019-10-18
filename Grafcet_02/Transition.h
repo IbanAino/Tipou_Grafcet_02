@@ -4,6 +4,9 @@
 //*** LIBRARIES ***
 #include <arduino.h>
 #include "Step.h"
+#include "Inputs.h"
+
+
 
 class Transition
 {
@@ -17,7 +20,7 @@ class Transition
 
   protected:
   //*** ATTRIBUTS ***
-  Step *previousStep;
+  //Step *previousStep;
 
   //*** OBJECTS ***
 
@@ -34,5 +37,10 @@ class Transition1 : public Transition
 
   //*** FUNCTIONS ***
   void ComputeTransition();
+
+  Step *previousStepArray[1];
+  Step *nextStepArray[1];
+
+
 };
 #endif

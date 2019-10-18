@@ -41,4 +41,18 @@ class Step1_Sleep : public Step
   
 
 };
+
+class Step2_Awaike : public Step
+{
+  public:
+  //*** CONSTRUCTOR ***
+  Step2_Awaike();
+
+  //*** FUNCTIONS ***
+  virtual void Init();
+  virtual void Perform();
+  virtual void Exit();
+  
+
+};
 #endif
