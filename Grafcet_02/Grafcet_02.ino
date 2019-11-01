@@ -30,5 +30,13 @@ void setup() {
 }
 
 void loop() {
-  //Object_Step1_Sleep -> Init();
+  _Transition1 -> transitionInputs -> ReadInputs();
+  Serial.print("Button 1 : ");
+  Serial.println(_Transition1 -> transitionInputs -> button1State);
+  Serial.print("Button 2 : ");
+  Serial.println(_Transition1 -> transitionInputs -> button2State);
+  Serial.print("Button 3 : ");
+  Serial.println(_Transition1 -> transitionInputs -> button3State);
+  Serial.println("----------");
+  delay(1000);
 }

@@ -9,3 +9,9 @@ Inputs::Inputs(){
   pinMode(button2, INPUT_PULLUP);
   pinMode(button3, INPUT_PULLUP);
 }
+
+void Inputs::ReadInputs(){
+  button1State = digitalRead(button1) == LOW ? true : false;
+  button2State = digitalRead(button2) == LOW ? true : false;
+  button3State = digitalRead(button3) == LOW ? true : false;
+}
