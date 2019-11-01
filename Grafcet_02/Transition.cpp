@@ -5,7 +5,8 @@
 #include "Inputs.h"
 
 //*** CONSTRUCTOR ***
-Transition::Transition(){
+Transition::Transition(Inputs &var){
+  transitionInputs = &var;
   
 }
 

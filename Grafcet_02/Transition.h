@@ -12,14 +12,18 @@ class Transition
 {
   public:
   //*** CONSTRUCTOR ***
-  Transition();
+  Transition(Inputs &var);
 
   //*** FUNCTIONS ***
   void AddPreviousStep(Step *previousStep);
   virtual void ComputeTransition();
 
-  protected:
+  //protected:
   //*** ATTRIBUTS ***
+  Inputs *transitionInputs;
+  
+  int testVar;
+  
   //Step *previousStep;
 
   //*** OBJECTS ***
@@ -33,7 +37,7 @@ class Transition1 : public Transition
 {
   public:
   //*** CONSTRUCTOR ***
-  Transition1();
+  Transition1(Inputs &var);
 
   //*** FUNCTIONS ***
   void ComputeTransition();

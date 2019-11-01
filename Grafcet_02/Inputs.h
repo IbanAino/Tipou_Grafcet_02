@@ -15,6 +15,11 @@ class Inputs
   bool variable2bool = true;
   int variable3int = 42;
 
+  // Hardware input pins
+  const byte button1 = 5; // shake sensor
+  const byte button2 = 2; // water sensor
+  const byte button3 = 3; // light sensor
+
 };
 
 
